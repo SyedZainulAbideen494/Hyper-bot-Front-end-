@@ -1,0 +1,98 @@
+.setup-section3-container {
+    display: flex;
+    justify-content: center;
+    padding: 70px 40px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+  }
+  
+  .setup-section3-content {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .setup-section3-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .setup-section3-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.7;
+  }
+  
+  .setup-steps {
+    margin-bottom: 40px;
+  }
+  
+  .setup-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .step-icon-container {
+    background-color: #48c78e;
+    padding: 18px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .step-icon {
+    font-size: 28px;
+    color: white;
+  }
+  
+  .step-text h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .step-text p {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .step-arrow {
+    font-size: 30px;
+    color: #48c78e;
+    margin-top: 20px;
+  }
+  
+  .setup-section3-btn {
+    padding: 18px 36px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #48c78e;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .setup-section3-btn:hover {
+    background-color: #39a775;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .setup-section3-container {
+      padding: 50px 20px;
+    }
+  
+    .setup-section3-content {
+      padding: 0 10px;
+    }
+  }
+  

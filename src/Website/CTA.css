@@ -1,0 +1,58 @@
+.cta-section {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+  
+  .cta-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .cta-description {
+    font-size: 18px;
+    color: #f0f0f0;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-btn {
+    padding: 16px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .cta-title {
+      font-size: 28px;
+    }
+  
+    .cta-description {
+      font-size: 16px;
+    }
+  
+    .cta-btn {
+      font-size: 16px;
+      padding: 12px 24px;
+    }
+  }
+  

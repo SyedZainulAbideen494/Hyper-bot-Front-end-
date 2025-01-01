@@ -1,0 +1,270 @@
+/* Container */
+.chatbot__container {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #374151;
+    display: flex;
+    flex-direction: column;
+    height: 600px; /* Fixed height for the chatbot container */
+    max-width: 380px;
+    margin: auto;
+    border-radius: 16px; /* Slightly rounded corners for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease-in-out;
+}
+
+.chatbot__container:hover {
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+
+/* Header */
+.chatbot__header {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px; /* Slightly larger padding */
+    background-color: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.chatbot__logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+}
+
+.chatbot__logo:hover {
+    transform: scale(1.1); /* Small hover effect on logo */
+}
+
+.chatbot__header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2563eb; /* Blue header text */
+}
+
+.chatbot__status {
+    font-size: 0.85rem;
+    color: #10b981;
+    font-weight: 500;
+}
+
+/* Chatbox */
+.chatbot__chatbox {
+    flex-grow: 1;
+    padding: 14px 20px;
+    overflow-y: auto; /* Enables scrolling if content exceeds height */
+    max-height: calc(100% - 130px); /* Leaves space for header and input */
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    scrollbar-width: thin;
+    scrollbar-color: #e5e7eb transparent;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.chatbot__chatbox::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chatbot__chatbox::-webkit-scrollbar-thumb {
+    background-color: #e5e7eb;
+    border-radius: 10px;
+}
+
+.chatbot__chatbox::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Messages */
+.chatbot__message {
+    max-width: 70%;
+    padding: 12px 18px; /* Slightly larger padding */
+    border-radius: 24px; /* Softer, larger rounded corners */
+    font-size: 0.9rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease-in-out; /* Animation for messages */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.chatbot__userMessage {
+    background-color: #2563eb;
+    color: #ffffff;
+    align-self: flex-end;
+    text-align: right;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 24px 24px 0 24px;
+    transition: background-color 0.3s ease;
+}
+
+.chatbot__userMessage:hover {
+    background-color: #1d4ed8; /* Darken on hover */
+}
+
+.chatbot__botMessage {
+    background-color: #f3f4f6;
+    color: #374151;
+    align-self: flex-start;
+    text-align: left;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 24px 24px 24px 0;
+    transition: background-color 0.3s ease;
+}
+
+.chatbot__botMessage:hover {
+    background-color: #e5e7eb; /* Lighten on hover */
+}
+
+/* Input Form */
+.chatbot__form {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px; /* Slightly larger padding */
+    background-color: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+}
+
+.chatbot__input {
+    flex: 1;
+    padding: 12px 18px;
+    border-radius: 24px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    color: #374151;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.chatbot__input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 6px rgba(37, 99, 235, 0.2);
+}
+
+.chatbot__input::placeholder {
+    color: #9ca3af;
+    font-size: 0.85rem;
+}
+
+/* Send Button */
+.chatbot__button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 14px;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.chatbot__button:hover {
+    background-color: #1d4ed8;
+}
+
+.chatbot__button:active {
+    background-color: #1e3a8a;
+}
+
+/* Footer */
+.chatbot__container p {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #9ca3af;
+    margin: 12px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .chatbot__container {
+        width: 100%;
+        height: 100vh; /* Full height on mobile */
+    }
+
+    .chatbot__header h3 {
+        font-size: 0.9rem;
+    }
+
+    .chatbot__status {
+        font-size: 0.75rem;
+    }
+
+    .chatbot__input {
+        font-size: 0.85rem;
+    }
+
+    .chatbot__button {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .chatbot__message {
+        font-size: 0.85rem;
+    }
+}
+
+
+.chatbot__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .chatbot__loader {
+    border: 4px solid transparent;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  /* Styling for the questions displayed above the input form */
+.chatbot__questions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    max-width: 80%;
+    align-self: flex-start;
+  }
+  
+  .chatbot__question {
+    background-color: #f0f0f0; /* Light background color */
+    color: #333; /* Dark text color */
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  /* Hover effect for questions */
+  .chatbot__question:hover {
+    background-color: #e0e0e0; /* Slightly darker when hovered */
+  }
